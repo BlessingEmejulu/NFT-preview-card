@@ -1,0 +1,178 @@
+        /* this sheet describle how html elements are displayed on desktopscreen*/
+        @import url("https://fonts.google.com/specimen/Outfit");
+
+        * {
+            box-sizing: border-box;
+        }
+
+        :root {
+            --Soft-blue: hsl(215, 51%, 70%);
+            --Cyan: hsl(178, 100%, 50%);
+            --Very-dark-blue-main-bg: hsl(217, 54%, 11%);
+            --Very-dark-blue-card-bg: hsl(216, 50%, 16%);
+            --Very-dark-blue: hsl(215, 32%, 27%);
+            --White: hsl(0, 0%, 100%);
+        }
+
+        *,
+        *::after,
+        *::before {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            box-sizing: border-box;
+            font-family: 'Outfit';
+        }
+
+        body {
+            background-color: var(--Very-dark-blue-main-bg);
+            padding: 30px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+
+        .main-card {
+            background-color: var(--Very-dark-blue-card-bg);
+            border-radius: 8px;
+            width: 300px;
+            height: 530px;
+            padding: 20px;
+            font-family: "Outfit";
+            margin: auto;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+        }
+
+        header {
+            position: relative;
+            justify-content: center;
+            display: flex;
+        }
+
+        header img {
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 300px;
+            border-radius: 8px;
+        }
+
+        .overlay {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+            border-radius: 8px;
+            z-index: 99;
+            cursor: pointer;
+            opacity: 0;
+            background: url('images/icon-view.svg') no-repeat;
+            background-position: center;
+        }
+
+        .overlay:hover {
+            background-color: var(--Cyan);
+            background-size: 46px;
+            opacity: 0.6;
+            transition: all 0.2s ease;
+        }
+
+        .overlay img {
+            align-self: center;
+            width: 46px;
+            height: fit-content;
+            visibility: hidden;
+        }
+
+        .overlay img:hover {
+            visibility: visible;
+        }
+
+        h1 {
+            color: var(--White);
+            font-weight: 600;
+            text-align: left;
+            font-size: 25px;
+            padding: 15px;
+        }
+
+        h1:hover {
+            color: var(--Cyan);
+        }
+
+        p {
+            color: var(--Soft-blue);
+            font-size: 15px;
+            text-align: left;
+            padding: 5px;
+        }
+
+        .price-section {
+            padding: 10px;
+        }
+
+        #ethereum-icon {
+            margin: 5px;
+            float: left;
+        }
+
+        .eth {
+            color: var(--Cyan);
+            position: relative;
+            font-weight: 600;
+            top: 8px;
+        }
+
+        #clock-icon {
+            position: relative;
+            bottom: 10px;
+            right: 95px;
+            float: right;
+        }
+
+        .days-left {
+            color: var(--Soft-blue);
+            position: relative;
+            bottom: 10px;
+            float: right;
+        }
+
+        hr {
+            border-top: 1px solid var(--Soft-blue);
+        }
+
+        #creator-image {
+            width: 15%;
+            position: relative;
+            top: 10px;
+            border-radius: 50px;
+            border: 1px solid var(--White);
+        }
+
+        .creator-name {
+            color: var(--Soft-blue);
+            position: relative;
+            float: right;
+            font-size: 18px;
+            top: 15px;
+            right: 25px;
+        }
+
+        .creator-name a {
+            color: var(--White);
+        }
+
+        .creator-name a:hover {
+            color: var(--Cyan);
+        }
+
+        .attribution {
+            font-size: 16px;
+            text-align: center;
+            padding: 20px;
+            color: var(--White);
+        }
+
+        .attribution a {
+            color: var(--Cyan);
+        }
